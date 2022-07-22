@@ -1,0 +1,41 @@
+//Ödev 1
+
+
+//Bir konsol uygulamasında kullanıcıdan pozitif bir sayı girmesini isteyin(n).
+//Sonrasında kullanıcıdan n adet pozitif sayı girmesini isteyin.
+//Kullanıcının girmiş olduğu sayılardan çift olanlar console'a yazdırın.
+
+    class Program
+    {
+      public static void Main(string[] args)
+        {
+            Console.WriteLine("Lutfen pozitif bir sayı giriniz");
+            int indpuNumber = 0 ;
+            indpuNumber = Convert.ToInt32(Console.ReadLine());
+            
+            Console.WriteLine("Lutfen n adet pozitif sayı giriniz");
+
+            List<int> x = new List<int>();
+
+           
+            for (int i = 0; i < indpuNumber; i++)
+            {
+                x.Add(Convert.ToInt32(Console.ReadLine()));
+
+
+            }
+            for (int i = 0; i < indpuNumber; i++)
+            {
+                if (x[i]%2==0)
+                {
+                    Console.WriteLine(x[i]);
+
+                }
+                 
+
+            }
+
+
+        }
+    }
+ 
