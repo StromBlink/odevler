@@ -1,0 +1,12 @@
+ Console.WriteLine("Lutfen bir cumle giriniz");
+            string cumle;
+            string cumle2;
+            cumle = Console.ReadLine();
+            cumle2 = cumle.Replace(".", String.Empty);
+            int x = cumle2.Length;
+            
+            cumle2= cumle2.Replace(" ", String.Empty);
+           
+             
+            int x2 = cumle2.Length;
+            Console.WriteLine( " cumlede " + (x - x2 + 1) + " kelime vardir"  );
