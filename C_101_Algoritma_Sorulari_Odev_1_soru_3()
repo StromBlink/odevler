@@ -1,0 +1,25 @@
+Console.WriteLine("Lutfen pozitif bir sayı giriniz");
+
+            int n = 0;
+            List<string> x = new List<string>();
+            while (true)
+            {
+                if (int.TryParse(Console.ReadLine(), out n))
+                { break; }
+                else
+                {
+                    Console.WriteLine("string girdiniz lutfen pozitif bir sayi giriniz");
+                }
+
+            }
+
+            for (int i = 0; i < n; i++)
+            {
+                x.Add(Console.ReadLine());
+
+            }
+            for (int i = 0; i < x.Count; i++)
+            {
+                Console.WriteLine((i + 1) + " kelime :" + x[i]);
+
+            }
