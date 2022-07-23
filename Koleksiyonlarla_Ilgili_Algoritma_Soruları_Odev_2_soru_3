@@ -1,0 +1,28 @@
+Console.WriteLine("Lutfen bir cumle giriniz");
+            string inputsentence = Console.ReadLine();
+            string sentence;
+            sentence  = inputsentence.Replace(".", string.Empty);
+            sentence  = sentence.Replace(",", string.Empty);
+            sentence  = sentence.Replace(" ", string.Empty);
+            int sentencelenght = sentence.Length;
+            List<string> vowel = new List<string>();
+
+            for (int i = 0; i < sentencelenght; i++)
+            {
+                if (true)
+                {
+
+                }
+
+            }
+            
+             if (sentence.Contains("a")){vowel.Add("a")   ; }
+            if (sentence.Contains("e")) { vowel.Add("e"); }
+            if (sentence.Contains("i")) { vowel.Add("i"); }
+            if (sentence.Contains("o")) { vowel.Add("o"); }
+            if (sentence.Contains("u")) { vowel.Add("u"); }
+            vowel.Sort();
+            for (int x = 0; x < vowel.Count; x++)
+            {
+                Console.Write(vowel[x]);
+            }
