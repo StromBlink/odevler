@@ -1,0 +1,86 @@
+
+            Console.WriteLine("20 adet pozitif sayilar giriniz");
+            int buyuksayitoplami = 0;
+            int kucuksayitoplami = 0;
+            int ortalamaenbuyuk = 0;
+            int ortalamaenkucuk = 0;
+            int dongukirici = 0;
+            int dongukirici2 = 0;
+            List<int> girilensayilar = new List<int>();
+            List<int> enbuyuksayilar = new List<int>();
+            List<int> enkucuksayilar = new List<int>();
+            for (int i = 0; i < 20; i++)
+            {
+                int gecicisayi = 0;
+                while (true)
+                {
+                    if (int.TryParse(Console.ReadLine(), out gecicisayi))
+                    {
+                        if (gecicisayi > 0)
+                        {
+                            break;
+
+                        }
+                        else
+                        {
+                            Console.WriteLine("negatif sayi ve ya 0 girdiniz lutfen pozitif bir sayi giriniz");
+
+                        }
+
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("string girdiniz lutfen pozitif bir sayi giriniz");
+
+                    }
+
+
+                }
+                girilensayilar.Add(gecicisayi);
+
+
+            }
+            girilensayilar.Sort();
+            for (int a = girilensayilar.Count - 1; a > 0; a--)
+            {
+
+                if ((a - 1) != -1 & dongukirici < 3)
+                {
+                    if (girilensayilar[a] > girilensayilar[a - 1] && girilensayilar[a] != girilensayilar[a - 1])
+                    {
+                        enbuyuksayilar.Add(girilensayilar[a]);
+                        dongukirici++;
+                    }
+                }
+            }
+            for (int b = 0; b < girilensayilar.Count; b++)
+            {
+                if ((b + 1) != girilensayilar.Count & dongukirici2 < 3)
+                {
+                    if (girilensayilar[b] < girilensayilar[b + 1] && girilensayilar[b] != girilensayilar[b + 1])
+                    {
+                        enkucuksayilar.Add(girilensayilar[b]);
+                        dongukirici2++;
+                    }
+                }
+            }
+
+             
+
+            for (int c = 0; c < enbuyuksayilar.Count; c++)
+            {
+                 
+                buyuksayitoplami = enbuyuksayilar[c] + buyuksayitoplami;
+            }
+            for (int c = 0; c < enkucuksayilar.Count; c++)
+            {
+
+                kucuksayitoplami = enkucuksayilar[c] + kucuksayitoplami;
+            }
+            ortalamaenbuyuk = buyuksayitoplami / 3;
+            ortalamaenkucuk = kucuksayitoplami / 3;
+
+
+            Console.WriteLine(" En buyuk 3 sayinin  ortalamasi: " + ortalamaenbuyuk + " En kucuk 3 sayinin ortalamasi: " + ortalamaenkucuk);
+            Console.WriteLine(" Ortalama toplamlari: " + (ortalamaenbuyuk + ortalamaenkucuk));
